@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelRecordsApp.RegisterPage">
+    <StackLayout VerticalOptions="Start"
+                 Margin="20,30,20,0">
+        
+        <Entry x:Name="emailEntry"
+               Margin="20,10,20,0"
+               Style="{StaticResource mainEntryStyle}"
+               Placeholder="Email Adress"
+               Keyboard="Email"/>
+        <Entry x:Name="passwordEntry"
+               Margin="20,10,20,0"
+               Style="{StaticResource mainEntryStyle}"
+               Placeholder="Password"
+               IsPassword="True"/>
+        <Entry x:Name="confirmPasswordEntry"
+               Margin="20,10,20,0"
+               Style="{StaticResource mainEntryStyle}"
+               Placeholder="Confirm Password"
+               IsPassword="True"/>
+        <Button x:Name="Register"
+                Margin="120,30,120,0"
+                Text= "Register"
+                Clicked="Register_Clicked"
+                Style="{StaticResource mainButtonStyle}"
+                TextColor="White"/>
+       
+                
+    </StackLayout>
+</ContentPage>

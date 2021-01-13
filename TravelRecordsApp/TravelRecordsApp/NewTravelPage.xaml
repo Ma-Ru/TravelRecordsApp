@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelRecordsApp.NewTravelPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Save"
+                     IconImageSource="save.png"
+                     Text="Save"
+                     Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Editor x:Name="experienceEditor"
+                    Margin="20,20,20,0"
+                    VerticalOptions="StartAndExpand"
+                    Placeholder="Write your Experience here"
+                    Style="{StaticResource mainEditorStyle}"/>
+            <ListView x:Name="venueListView"
+                      Margin="20, 0"
+                      HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                
+                                <Label Grid.Row="0" Grid.Column="0"
+                                       Text="{Binding name}" 
+                                       FontAttributes="Bold"/>
+                                
+                                <Label Grid.Row="1" Grid.Column="0"
+                                       TextColor="DodgerBlue"
+                                       Text="{Binding location.address}"/>
+                                
+                                <Label Grid.Row="0" Grid.Column="1"
+                                       Text="{Binding location.distance, StringFormat=' {0} meters'}" />
+                                
+                                <Label Grid.Row="1" Grid.Column="1"
+                                       Text="{Binding location.distanceInMiles, StringFormat=' {0:0.00} miles'}"/>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

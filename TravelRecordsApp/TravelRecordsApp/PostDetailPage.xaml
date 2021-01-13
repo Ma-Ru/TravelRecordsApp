@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelRecordsApp.PostDetailPage">
+    
+    <StackLayout VerticalOptions="Start"
+                 Margin="20,30,20,0">
+        <Entry x:Name="experienceEntry"
+               Margin="20,10,20,0"
+               Style="{StaticResource mainEntryStyle}"/>
+        <Button x:Name="UpdateButton"
+                Text="Update"
+                Clicked="UpdateButton_Clicked"
+                 Margin="100,30,100,0"
+                Style="{StaticResource mainButtonStyle}"/>
+        <Button x:Name="DeleteButton"
+                Text="Delete"
+                Clicked="DeleteButton_Clicked"
+                 Margin="100,30,100,0"
+                Style="{StaticResource mainButtonStyle}"/>
+    </StackLayout>
+</ContentPage>
