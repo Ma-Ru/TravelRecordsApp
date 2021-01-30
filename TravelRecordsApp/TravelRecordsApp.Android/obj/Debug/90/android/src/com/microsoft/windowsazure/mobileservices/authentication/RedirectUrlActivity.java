@@ -2,7 +2,7 @@ package com.microsoft.windowsazure.mobileservices.authentication;
 
 
 public class RedirectUrlActivity
-	extends md5d630c3d3bfb5f5558520331566132d97.WebAuthenticatorCallbackActivity
+	extends crc64a0e0a82d0db9a07d.WebAuthenticatorCallbackActivity
 	implements
 		mono.android.IGCUserPeer
 {

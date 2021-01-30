@@ -10,8 +10,9 @@ namespace TravelRecordsApp
     {
         public static string DatabaseLocation = string.Empty;
 
-        //public static MobileServiceClient mobileService = new MobileServiceClient("https://travelrecordsappxam.azurewebsites.net"); //("UseDevelopmentStorage=TRUE"); //("https://travelrecordsappxam.azurewebsites.net");
-        public static MobileServiceClient mobileService;
+        public static MobileServiceClient mobileService = new MobileServiceClient("https://travelrecordsappxam.azurewebsites.net"); 
+        //("UseDevelopmentStorage=TRUE");
+        //public static MobileServiceClient mobileService;
 
 
         public App()
@@ -32,7 +33,7 @@ namespace TravelRecordsApp
             // Handle when your app starts
             try
             {
-                mobileService = new MobileServiceClient("https://travelrecordsappxam.azurewebsites.net");
+               // mobileService = new MobileServiceClient("https://travelrecordsappxam.azurewebsites.net");
             }
            
             catch (Exception exp)
